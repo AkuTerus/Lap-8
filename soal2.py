@@ -1,18 +1,14 @@
-handle = open('soal.txt','r')
-for line in handle:
-    line = line.lower()
-    line = line.split('||')
-    line1 = line[0].strip()
-    line2 = line[1].strip()
+handle = open('soal.txt','r')   
+for i in handle:
+    i = i.lower()
+    i = i.split('||')
+    line1 = i[0].strip()
+    line2 = i[1].strip()
+    soal = str(line1)
+    print(soal)
     jawaban = input('Jawaban : ').lower()
     if jawaban == line2:
-        print('Benar')
+        print('Jawaban Benar !')
     else:
-        print('Salah')
-
+        print('Jawaban Salah !')
 handle.close()
-
-
-
-
-
